@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    
+    <!-- iOS 专用图标配置 -->
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    
+    <!-- 让应用在从主屏幕打开时全屏显示（像原生App一样隐藏地址栏） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PekingJW" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>PekingJW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              map: {
+                bg: '#f5f5f5',
+                card: '#ffffff',
+                blue: '#3b82f6',
+                green: '#10b981',
+                red: '#ef4444',
+                text: '#333333',
+                subwayRed: '#c23a30', // Line 1
+                subwayBlue: '#00539f', // Line 2
+                subwayTeal: '#008e9c', // Line 4
+                subwayPurple: '#b61f7e', // Line 5
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Hide scrollbar for clean UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0",
+    "date-fns/": "https://aistudiocdn.com/date-fns@^4.1.0/",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 text-gray-800 antialiased overscroll-none">
+    <div id="root"></div>
+    <!-- 这一行非常重要：告诉 Vite 从哪里开始运行 React 代码 -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
